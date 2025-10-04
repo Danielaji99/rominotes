@@ -1,6 +1,7 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
+import tseslint from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,6 +21,13 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  ...tseslint.configs.recommended,
+   {
+     rules: {
+       "no-console": ["warn", { allow: ["error"] }],
+       "no-restricted-syntax": "error",
+     },
+   },
 ];
 
 export default eslintConfig;

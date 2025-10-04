@@ -1,0 +1,2 @@
+echo "Creating production build to verify success before push"
+npm run build
