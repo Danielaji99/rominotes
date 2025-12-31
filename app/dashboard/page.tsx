@@ -86,7 +86,9 @@ export default async function DashboardPage() {
               key={note.id}
               className="px-6 py-4 bg-teal-300 text-black text-xl rounded-lg flex flex-col gap-3"
             >
-              <p className="flex-1 wrap-break-words">{note.content}</p>
+              <p className="flex-1 wrap-break-word overflow-wrap-anywhere whitespace-pre-wrap">
+                {note.content}
+              </p>
               <div className="flex justify-end">
                 <NoteActions
                   noteId={note.id}
