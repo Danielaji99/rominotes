@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "prisma generate && next build --turbopack",
-    "start": "next start",
-    "lint": "tsc -b && eslint --fix",
     "prepare": "husky",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "build": "prisma generate && next build",
+    "dev": "next dev --turbopack",
+    "start": "next start",
+    "lint": "tsc -b && eslint --fix"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.2.0",
